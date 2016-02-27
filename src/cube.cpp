@@ -13,7 +13,7 @@ template<typename T>
 Persistent<FunctionTemplate> cubeWrap<T>::constructor;
 
 template <typename T>
-cubeWrap<T>::cubeWrap(const Arguments& args) : q_(NULL) {
+NAN_METHOD(cubeWrap<T>::cubeWrap) {
 };
 
 template <typename T>
@@ -93,7 +93,7 @@ template<> inline void cubeWrap<arma::sword>::Initialize(Handle<Object> target) 
 };
 
 template <typename T>
-Handle<Value> cubeWrap<T>::New(const Arguments& args) {
+NAN_METHOD(cubeWrap<T>::New) {
   HandleScope scope;
 
   if (args.IsConstructCall()) {

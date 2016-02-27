@@ -34,37 +34,37 @@ public:
      colvecWrap(const v8::Arguments& args);
     ~colvecWrap();
     static v8::Persistent<v8::FunctionTemplate> constructor;
-    static v8::Handle<v8::Value> New(const v8::Arguments& args);
+    static NAN_METHOD(New);
 
     // Methods
 
-    static v8::Handle<v8::Value> at(const v8::Arguments& args);
+    static NAN_METHOD(at);
 
-    static v8::Handle<v8::Value> fill(const v8::Arguments& args);
+    static NAN_METHOD(fill);
 
-    static v8::Handle<v8::Value> is_empty(const v8::Arguments& args);
-    static v8::Handle<v8::Value> is_finite(const v8::Arguments& args);
+    static NAN_METHOD(is_empty);
+    static NAN_METHOD(is_finite);
 
-    static v8::Handle<v8::Value> print(const v8::Arguments& args);
+    static NAN_METHOD(print);
 
-    static v8::Handle<v8::Value> randu(const v8::Arguments& args);
-    static v8::Handle<v8::Value> randn(const v8::Arguments& args);
-    static v8::Handle<v8::Value> reset(const v8::Arguments& args);
-    static v8::Handle<v8::Value> resize(const v8::Arguments& args);
+    static NAN_METHOD(randu);
+    static NAN_METHOD(randn);
+    static NAN_METHOD(reset);
+    static NAN_METHOD(resize);
 
 
-    static v8::Handle<v8::Value> set_size(const v8::Arguments& args);
-    static v8::Handle<v8::Value> shed_row(const v8::Arguments& args);
-    static v8::Handle<v8::Value> shed_rows(const v8::Arguments& args);
-    static v8::Handle<v8::Value> swap_rows(const v8::Arguments& args);
-    static v8::Handle<v8::Value> swap_cols(const v8::Arguments& args);
+    static NAN_METHOD(set_size);
+    static NAN_METHOD(shed_row);
+    static NAN_METHOD(shed_rows);
+    static NAN_METHOD(swap_rows);
+    static NAN_METHOD(swap_cols);
 
-    static v8::Handle<v8::Value> zeros(const v8::Arguments& args);
+    static NAN_METHOD(zeros);
 
     // Accesors
-    static v8::Handle<v8::Value> GetNrow(v8::Local<v8::String> property, const v8::AccessorInfo& info);
-    static v8::Handle<v8::Value> GetNcol(v8::Local<v8::String> property, const v8::AccessorInfo& info);
-    static v8::Handle<v8::Value> GetNelem(v8::Local<v8::String> property, const v8::AccessorInfo& info);
+    static NAN_PROPERTY_GETTER(GetNrow);
+    static NAN_PROPERTY_GETTER(GetNcol);
+    static NAN_PROPERTY_GETTER(GetNelem);
 
 	// Wrapped object
     arma::Col<T>* q_;
