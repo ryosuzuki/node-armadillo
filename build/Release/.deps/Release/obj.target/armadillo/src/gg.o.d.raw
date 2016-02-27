@@ -1,0 +1,9 @@
+Release/obj.target/armadillo/src/gg.o: ../src/gg.cpp \
+  /Users/ryosuzuki/.node-gyp/0.12.0/src/node.h \
+  /Users/ryosuzuki/.node-gyp/0.12.0/deps/v8/include/v8.h \
+  /Users/ryosuzuki/.node-gyp/0.12.0/deps/v8/include/v8stdint.h \
+  /Users/ryosuzuki/.node-gyp/0.12.0/deps/v8/include/v8config.h \
+  /Users/ryosuzuki/.node-gyp/0.12.0/src/node_version.h ../src/matrix.h \
+  ../src/matrix.cpp ../src/helper.h ../src/colvec.h ../src/colvec.cpp \
+  ../src/rowvec.h ../src/rowvec.cpp ../src/helper.cpp ../src/cube.h \
+  ../src/cube.cpp ../src/field.h ../src/field.cpp
